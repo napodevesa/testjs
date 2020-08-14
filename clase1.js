@@ -26,10 +26,7 @@ var name = document.getElementById("name").value;
 var nombre = document.getElementById("nombre").value;
 var edad = document.getElementById("edad").value;
 
-	var str = name.substr(0,3);
-	
-	document.write (str + "<br/>");
-
+	imprimirStr(name);
 	imprimirEdad(nombre,edad);
 }
 
@@ -38,6 +35,14 @@ function imprimirEdad (n, e)
 	var nombre = n;
 	var edad = e;
 	document.write (nombre + " tiene " + edad + " years");
+
+}
+
+function imprimirStr (n)
+{
+var nombre = n;
+var str = nombre.substr(0,3);
+document.write (str.toUpperCase() + "<br/>");
 
 }
 
