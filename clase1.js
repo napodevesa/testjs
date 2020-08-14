@@ -123,20 +123,21 @@ function engordar (s)
 
 	for (var i=0; i <= dias; i++)
 	{
-		pesoFinal = pesoFinal +  1;
+		pesoFinal = pesoFinal +  0.5;
 	}
 
 document.write (" Peso a fin de anio:  " + pesoFinal + "<br/>");
-}
+return pesoFinal;
 
+}
 
 function engordarEdad (edad,s)
 {
 	var pesoF= parseInt(s)
 
-	while (edad <= dias)
+	while ( edad <= dias)
 	{
-		pesoF = pesoF +  2;
+		pesoF = pesoF +  1;
 		edad++
 	}
 document.write (" Aumento de dos kilos por year:  " + pesoF);
