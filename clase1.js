@@ -26,8 +26,11 @@ var getData = function ()
 var name = document.getElementById("name").value;
 var nombre = document.getElementById("nombre").value;
 var edad = document.getElementById("edad").value;
+var job = document.getElementById("job").value;
 
-	resultado.innerHTML = imprimirStr(name) + imprimirEdad(nombre,edad) + imprimirCumpleanios (edad);
+	resultado.innerHTML = imprimirStr(name) + 
+	imprimirEdad(nombre,edad) + imprimirCumpleanios (edad) 
+	+ compararNombre (name, nombre) + compararJob (job);
 
 }
 
@@ -41,8 +44,7 @@ function imprimirEdad (n, e)
 
 function imprimirStr (n)
 {
-	var nombre = n;
-	var str = nombre.substr(0,3);
+	var str = n.substr(0,3);
 	document.write (str.toUpperCase() + "<br/>");
 
 }
@@ -59,6 +61,30 @@ function imprimirCumpleanios (e)
 		edad: persona.edad + 1;
 	}
 	*/
+
+}
+
+function compararNombre (n, d)
+{
+	if (n===d)
+	{
+		document.write ("Error son la misma persona");
+	}
+
+}
+
+function compararJob (j)
+{
+	var ing = "ingeniero";
+	var med = "medico"
+
+	if (j === ing || j === med)
+	{
+		document.write ("tu profesion sirve");
+	} else
+	{
+		document.write ("tu profesion NO sirve");
+	}
 
 }
 
