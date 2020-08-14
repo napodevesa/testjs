@@ -17,6 +17,7 @@ console.log (str);
 
 */
 
+
 var resultado = document.getElementById("resultado");
 
 
@@ -26,23 +27,38 @@ var name = document.getElementById("name").value;
 var nombre = document.getElementById("nombre").value;
 var edad = document.getElementById("edad").value;
 
-	imprimirStr(name);
-	imprimirEdad(nombre,edad);
+	resultado.innerHTML = imprimirStr(name) + imprimirEdad(nombre,edad) + imprimirCumpleanios (edad);
+
 }
 
 function imprimirEdad (n, e)
 {
 	var nombre = n;
 	var edad = e;
-	document.write (nombre + " tiene " + edad + " years");
+	document.write (nombre + " tiene " + edad + " years ");
 
 }
 
 function imprimirStr (n)
 {
-var nombre = n;
-var str = nombre.substr(0,3);
-document.write (str.toUpperCase() + "<br/>");
+	var nombre = n;
+	var str = nombre.substr(0,3);
+	document.write (str.toUpperCase() + "<br/>");
+
+}
+
+function imprimirCumpleanios (e)
+
+{
+	var edad = parseInt (e) + 1;
+	document.write ("cumplira: " + edad + "<br/>");
+
+	/*
+	return {
+		...persona
+		edad: persona.edad + 1;
+	}
+	*/
 
 }
 
