@@ -37,7 +37,7 @@ var getData = function ()
 		imprimirEdad(nombre,edad) + imprimirCumpleanios (edad) 
 		+ compararNombre (name, nombre) + compararJob (job) 
 		+ imprimirSiEsMayorDeEdad(edad) + 
-		permitirAcceso (edad) + engordar (peso) + engordarEdad (edad,peso);
+		permitirAcceso (edad) + imprimirEngordad (peso) + engordarEdad (edad,peso);
 
 }
 
@@ -126,20 +126,29 @@ function engordar (s)
 		pesoFinal = pesoFinal +  0.5;
 	}
 
-document.write (" Peso a fin de anio:  " + pesoFinal + "<br/>");
+
 return pesoFinal;
 
 }
 
-function engordarEdad (edad,s)
+
+function imprimirEngordad (s)
 {
-	var pesoF= parseInt(s)
+	var p = engordar (s);
+	document.write (" Peso a fin de anio:  " + p + "<br/>");
+
+}
+
+function engordarEdad (edad,r)
+{
+	var pesoF= parseInt(r)
+	
 
 	while ( edad <= dias)
 	{
 		pesoF = pesoF +  1;
 		edad++
 	}
-document.write (" Aumento de dos kilos por year:  " + pesoF);
+document.write (" Aumento kilos por year:  " + pesoF);
 }
 
