@@ -22,8 +22,11 @@ return {
 
 */
 
-
 var resultado = document.getElementById("resultado");
+
+const MAYOR_EDAD = 18;
+
+
 
 var getData = function ()
 { 
@@ -33,11 +36,18 @@ var getData = function ()
 	var job = document.getElementById("job").value;
 	var peso = document.getElementById("peso").value;
 
-		resultado.innerHTML = imprimirStr(name) + 
-		imprimirEdad(nombre,edad) + imprimirCumpleanios (edad) 
-		+ compararNombre (name, nombre) + compararJob (job) 
-		+ imprimirSiEsMayorDeEdad(edad) + 
-		permitirAcceso (edad) + imprimirEngordad (peso) + engordarEdad (edad,peso);
+	resultado.innerHTML =
+	imprimirStr(name) +
+	imprimirEdad(nombre,edad) +
+	imprimirCumpleanios (edad) +
+	compararNombre (name, nombre) +
+	compararJob (job) +
+	imprimirSiEsMayorDeEdad(edad) +
+	permitirAcceso (edad) +
+	imprimirEngordar (peso) +
+	engordarEdad (edad,peso) +  
+	imprimirBajarDePeso (peso); 
+	
 
 }
 
@@ -82,8 +92,6 @@ function compararJob (j)
 		document.write ("Tu profesion NO sirve <br/>");
 	}
 }
-
-const MAYOR_EDAD = 18;
 
 function esMayorDeEdad(s) 
 {
@@ -132,7 +140,7 @@ return pesoFinal;
 }
 
 
-function imprimirEngordad (s)
+function imprimirEngordar (s)
 {
 	var p = engordar (s);
 	document.write (" Peso a fin de anio:  " + p + "<br/>");
@@ -142,13 +150,36 @@ function imprimirEngordad (s)
 function engordarEdad (edad,r)
 {
 	var pesoF= parseInt(r)
-	
+
 
 	while ( edad <= dias)
 	{
 		pesoF = pesoF +  1;
 		edad++
 	}
-document.write (" Aumento kilos por year:  " + pesoF);
+document.write (" Aumento kilos por year:  " + pesoF + " <br/> ");
 }
+
+const META = 70;
+
+function bajarDePeso (peso)
+{
+	var ejercicio = 0;
+	var p = parseInt(peso)
+	
+	while (p < META)
+	{
+		ejercicio = ejercicio + 1;
+		p++;
+	}
+return ejercicio;
+}
+
+
+function imprimirBajarDePeso (peso)
+{
+	var t = bajarDePeso (peso)
+	document.write (" Ejercicio necesario:  " + t);
+}
+
 
