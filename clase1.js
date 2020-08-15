@@ -78,6 +78,7 @@ function compararNombre (n, d)
 	}
 }
 
+
 function compararJob (j)
 {
 	var ing = "ingeniero";

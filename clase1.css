@@ -1,0 +1,30 @@
+body 
+{
+	margin: 0;
+	background: #00aae4 ;
+}
+
+header
+{
+	width: 100%
+	height:80px;
+	background: #21C8B0 ;
+
+}
+
+
+#name
+{
+	color: blue;
+}
+
+
+p: first-child
+{
+	color: pink;
+}
+
+.caja{
+	width: 200px;
+}
+
