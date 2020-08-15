@@ -200,6 +200,7 @@ switch (signo)
 		document.write("felicidad");
 		break;
 	case "cancer":
+	case "cáncer":
 		document.write("amor");
 		break;
 	case "escorpio":
@@ -208,6 +209,9 @@ switch (signo)
 	case "leo":
 		document.write("buen trabajo");
 		break;
+	default:
+		document.write("tu signo no existe");
+		break; 
 	}
 
 
