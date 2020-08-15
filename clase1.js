@@ -20,6 +20,7 @@ return {
 		edad: persona.edad + 1;
 	}
 
+
 */
 
 var resultado = document.getElementById("resultado");
@@ -35,6 +36,9 @@ var getData = function ()
 	var edad = document.getElementById("edad").value;
 	var job = document.getElementById("job").value;
 	var peso = document.getElementById("peso").value;
+	var signo = document.getElementById("signo").value;
+
+
 
 	resultado.innerHTML =
 	imprimirStr(name) +
@@ -46,7 +50,9 @@ var getData = function ()
 	permitirAcceso (edad) +
 	imprimirEngordar (peso) +
 	engordarEdad (edad,peso) +  
-	imprimirBajarDePeso (peso); 
+	imprimirBajarDePeso (peso)+
+	signos(signo);
+	
 	
 
 }
@@ -180,7 +186,33 @@ return ejercicio;
 function imprimirBajarDePeso (peso)
 {
 	var t = bajarDePeso (peso)
-	document.write (" Ejercicio necesario:  " + t);
+	document.write (" Ejercicio necesario:  " + t + "<br/>");
 }
+
+
+function signos (signo){
+	var signo = signo;
+
+switch (signo)
+
+	{
+	case "acuario":
+		document.write("felicidad");
+		break;
+	case "cancer":
+		document.write("amor");
+		break;
+	case "escorpio":
+		document.write("paz");
+		break;
+	case "leo":
+		document.write("buen trabajo");
+		break;
+	}
+
+
+}
+
+
 
 
