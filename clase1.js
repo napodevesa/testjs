@@ -150,7 +150,7 @@ return pesoFinal;
 function imprimirEngordar (s)
 {
 	var p = engordar (s);
-	document.write (" Peso a fin de anio:  " + p + "<br/>");
+	document.write (" Peso a fin de año:  " + p + "<br/>");
 
 }
 
@@ -164,7 +164,7 @@ function engordarEdad (edad,r)
 		pesoF = pesoF +  1;
 		edad++
 	}
-document.write (" Aumento kilos por year:  " + pesoF + " <br/> ");
+document.write (" Aumento kilos por años:  " + pesoF + " <br/> ");
 }
 
 const META = 70;
